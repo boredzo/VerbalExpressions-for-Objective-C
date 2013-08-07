@@ -1,0 +1,430 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		31FFE66D17B1DE33000A9758 /* PRHVerbalExpression.m in Sources */ = {isa = PBXBuildFile; fileRef = 31FFE66C17B1DE33000A9758 /* PRHVerbalExpression.m */; };
+		31FFE67517B1DE34000A9758 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31FFE67417B1DE34000A9758 /* SenTestingKit.framework */; };
+		31FFE67617B1DE34000A9758 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31FFE66217B1DE33000A9758 /* Cocoa.framework */; };
+		31FFE67917B1DE34000A9758 /* libVerbalExpressions.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 31FFE65F17B1DE33000A9758 /* libVerbalExpressions.a */; };
+		31FFE67F17B1DE34000A9758 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 31FFE67D17B1DE34000A9758 /* InfoPlist.strings */; };
+		31FFE68217B1DE34000A9758 /* VerbalExpressionsMatchingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 31FFE68117B1DE34000A9758 /* VerbalExpressionsMatchingTests.m */; };
+		31FFE68E17B2E491000A9758 /* VerbalExpressionsNonMatchingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 31FFE68D17B2E491000A9758 /* VerbalExpressionsNonMatchingTests.m */; };
+		31FFE68F17B2F59C000A9758 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31FFE66717B1DE33000A9758 /* Foundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		31FFE67717B1DE34000A9758 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 31FFE65717B1DE32000A9758 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 31FFE65E17B1DE32000A9758;
+			remoteInfo = VerbalExpressions;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		31FFE65F17B1DE33000A9758 /* libVerbalExpressions.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libVerbalExpressions.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		31FFE66217B1DE33000A9758 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		31FFE66517B1DE33000A9758 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		31FFE66617B1DE33000A9758 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		31FFE66717B1DE33000A9758 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		31FFE66A17B1DE33000A9758 /* VerbalExpressions-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "VerbalExpressions-Prefix.pch"; sourceTree = "<group>"; };
+		31FFE66B17B1DE33000A9758 /* PRHVerbalExpression.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PRHVerbalExpression.h; sourceTree = "<group>"; };
+		31FFE66C17B1DE33000A9758 /* PRHVerbalExpression.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PRHVerbalExpression.m; sourceTree = "<group>"; };
+		31FFE67317B1DE34000A9758 /* VerbalExpressionsTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VerbalExpressionsTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		31FFE67417B1DE34000A9758 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		31FFE67C17B1DE34000A9758 /* VerbalExpressionsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "VerbalExpressionsTests-Info.plist"; sourceTree = "<group>"; };
+		31FFE67E17B1DE34000A9758 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		31FFE68017B1DE34000A9758 /* VerbalExpressionsMatchingTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VerbalExpressionsMatchingTests.h; sourceTree = "<group>"; };
+		31FFE68117B1DE34000A9758 /* VerbalExpressionsMatchingTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VerbalExpressionsMatchingTests.m; sourceTree = "<group>"; };
+		31FFE68C17B2E491000A9758 /* VerbalExpressionsNonMatchingTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VerbalExpressionsNonMatchingTests.h; sourceTree = "<group>"; };
+		31FFE68D17B2E491000A9758 /* VerbalExpressionsNonMatchingTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VerbalExpressionsNonMatchingTests.m; sourceTree = "<group>"; };
+		31FFE69017B2F5DB000A9758 /* VerbalExpressionsTests-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "VerbalExpressionsTests-Prefix.pch"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		31FFE65C17B1DE32000A9758 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				31FFE68F17B2F59C000A9758 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		31FFE66F17B1DE34000A9758 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				31FFE67517B1DE34000A9758 /* SenTestingKit.framework in Frameworks */,
+				31FFE67617B1DE34000A9758 /* Cocoa.framework in Frameworks */,
+				31FFE67917B1DE34000A9758 /* libVerbalExpressions.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		31FFE65617B1DE32000A9758 = {
+			isa = PBXGroup;
+			children = (
+				31FFE66817B1DE33000A9758 /* VerbalExpressions */,
+				31FFE67A17B1DE34000A9758 /* VerbalExpressionsTests */,
+				31FFE66117B1DE33000A9758 /* Frameworks */,
+				31FFE66017B1DE33000A9758 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		31FFE66017B1DE33000A9758 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				31FFE65F17B1DE33000A9758 /* libVerbalExpressions.a */,
+				31FFE67317B1DE34000A9758 /* VerbalExpressionsTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		31FFE66117B1DE33000A9758 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				31FFE66217B1DE33000A9758 /* Cocoa.framework */,
+				31FFE67417B1DE34000A9758 /* SenTestingKit.framework */,
+				31FFE66417B1DE33000A9758 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		31FFE66417B1DE33000A9758 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				31FFE66517B1DE33000A9758 /* AppKit.framework */,
+				31FFE66617B1DE33000A9758 /* CoreData.framework */,
+				31FFE66717B1DE33000A9758 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		31FFE66817B1DE33000A9758 /* VerbalExpressions */ = {
+			isa = PBXGroup;
+			children = (
+				31FFE66B17B1DE33000A9758 /* PRHVerbalExpression.h */,
+				31FFE66C17B1DE33000A9758 /* PRHVerbalExpression.m */,
+				31FFE66917B1DE33000A9758 /* Supporting Files */,
+			);
+			path = VerbalExpressions;
+			sourceTree = "<group>";
+		};
+		31FFE66917B1DE33000A9758 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				31FFE66A17B1DE33000A9758 /* VerbalExpressions-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		31FFE67A17B1DE34000A9758 /* VerbalExpressionsTests */ = {
+			isa = PBXGroup;
+			children = (
+				31FFE68017B1DE34000A9758 /* VerbalExpressionsMatchingTests.h */,
+				31FFE68117B1DE34000A9758 /* VerbalExpressionsMatchingTests.m */,
+				31FFE68C17B2E491000A9758 /* VerbalExpressionsNonMatchingTests.h */,
+				31FFE68D17B2E491000A9758 /* VerbalExpressionsNonMatchingTests.m */,
+				31FFE67B17B1DE34000A9758 /* Supporting Files */,
+			);
+			path = VerbalExpressionsTests;
+			sourceTree = "<group>";
+		};
+		31FFE67B17B1DE34000A9758 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				31FFE67C17B1DE34000A9758 /* VerbalExpressionsTests-Info.plist */,
+				31FFE67D17B1DE34000A9758 /* InfoPlist.strings */,
+				31FFE69017B2F5DB000A9758 /* VerbalExpressionsTests-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		31FFE65D17B1DE32000A9758 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		31FFE65E17B1DE32000A9758 /* VerbalExpressions */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 31FFE68517B1DE34000A9758 /* Build configuration list for PBXNativeTarget "VerbalExpressions" */;
+			buildPhases = (
+				31FFE65B17B1DE32000A9758 /* Sources */,
+				31FFE65C17B1DE32000A9758 /* Frameworks */,
+				31FFE65D17B1DE32000A9758 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = VerbalExpressions;
+			productName = VerbalExpressions;
+			productReference = 31FFE65F17B1DE33000A9758 /* libVerbalExpressions.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		31FFE67217B1DE34000A9758 /* VerbalExpressionsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 31FFE68817B1DE35000A9758 /* Build configuration list for PBXNativeTarget "VerbalExpressionsTests" */;
+			buildPhases = (
+				31FFE66E17B1DE34000A9758 /* Sources */,
+				31FFE66F17B1DE34000A9758 /* Frameworks */,
+				31FFE67017B1DE34000A9758 /* Resources */,
+				31FFE67117B1DE34000A9758 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				31FFE67817B1DE34000A9758 /* PBXTargetDependency */,
+			);
+			name = VerbalExpressionsTests;
+			productName = VerbalExpressionsTests;
+			productReference = 31FFE67317B1DE34000A9758 /* VerbalExpressionsTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		31FFE65717B1DE32000A9758 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "Peter Hosey";
+			};
+			buildConfigurationList = 31FFE65A17B1DE32000A9758 /* Build configuration list for PBXProject "VerbalExpressions" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 31FFE65617B1DE32000A9758;
+			productRefGroup = 31FFE66017B1DE33000A9758 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				31FFE65E17B1DE32000A9758 /* VerbalExpressions */,
+				31FFE67217B1DE34000A9758 /* VerbalExpressionsTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		31FFE67017B1DE34000A9758 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				31FFE67F17B1DE34000A9758 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		31FFE67117B1DE34000A9758 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		31FFE65B17B1DE32000A9758 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				31FFE66D17B1DE33000A9758 /* PRHVerbalExpression.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		31FFE66E17B1DE34000A9758 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				31FFE68217B1DE34000A9758 /* VerbalExpressionsMatchingTests.m in Sources */,
+				31FFE68E17B2E491000A9758 /* VerbalExpressionsNonMatchingTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		31FFE67817B1DE34000A9758 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 31FFE65E17B1DE32000A9758 /* VerbalExpressions */;
+			targetProxy = 31FFE67717B1DE34000A9758 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		31FFE67D17B1DE34000A9758 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				31FFE67E17B1DE34000A9758 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		31FFE68317B1DE34000A9758 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		31FFE68417B1DE34000A9758 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		31FFE68617B1DE34000A9758 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "VerbalExpressions/VerbalExpressions-Prefix.pch";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		31FFE68717B1DE34000A9758 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "VerbalExpressions/VerbalExpressions-Prefix.pch";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		31FFE68917B1DE35000A9758 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = "\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "VerbalExpressions/VerbalExpressions-Prefix.pch";
+				INFOPLIST_FILE = "VerbalExpressionsTests/VerbalExpressionsTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		31FFE68A17B1DE35000A9758 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = "\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "VerbalExpressions/VerbalExpressions-Prefix.pch";
+				INFOPLIST_FILE = "VerbalExpressionsTests/VerbalExpressionsTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		31FFE65A17B1DE32000A9758 /* Build configuration list for PBXProject "VerbalExpressions" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				31FFE68317B1DE34000A9758 /* Debug */,
+				31FFE68417B1DE34000A9758 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		31FFE68517B1DE34000A9758 /* Build configuration list for PBXNativeTarget "VerbalExpressions" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				31FFE68617B1DE34000A9758 /* Debug */,
+				31FFE68717B1DE34000A9758 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		31FFE68817B1DE35000A9758 /* Build configuration list for PBXNativeTarget "VerbalExpressionsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				31FFE68917B1DE35000A9758 /* Debug */,
+				31FFE68A17B1DE35000A9758 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 31FFE65717B1DE32000A9758 /* Project object */;
+}

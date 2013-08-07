@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'VerbalExpressions' target in the 'VerbalExpressions' project
+//
+
+#ifdef __OBJC__
+#	import <Foundation/Foundation.h>
+#endif
