@@ -111,7 +111,7 @@
 }
 
 - (instancetype) endOfLine {
-	if ( ! [_regexString hasPrefix:@"$"])
+	if ( ! [_regexString hasSuffix:@"$"])
 		[_regexString appendString:@"$"];
 	return self;
 }
