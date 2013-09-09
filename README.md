@@ -1,6 +1,8 @@
 # Verbal Expressions for Objective-C
 ## Regular expression syntax and Objective-C verbosity, together at last
 
+[![Build Status](https://travis-ci.org/boredzo/VerbalExpressions-for-Objective-C.png?branch=master)](https://travis-ci.org/boredzo/VerbalExpressions-for-Objective-C)
+
 This is an Objective-C implementation of @jehna's [VerbalExpressions](https://github.com/jehna/VerbalExpressions) project. This is an original implementation; I have copied only the method names, nothing more.
 
 ### Usage
