@@ -9,4 +9,7 @@
 - (void) testMatchRequiredSuffix;
 - (void) testMatchMultipleLines;
 
+- (void) testMatchGroup;
+- (void) testMatchNonCapturingGroup;
+
 @end

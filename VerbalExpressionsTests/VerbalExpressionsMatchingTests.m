@@ -78,4 +78,57 @@
 	STAssertTrue([verbalExpression matchesString:entireString], @"Pattern that spans a line-break in the string should match when search multiple lines is on");
 }
 
+- (void) testMatchGroup {
+	NSString *patternPart1 = @"Hello ";
+	NSString *patternPart2 = @"*\n one two three yes \n*";
+	NSString *patternPart3 = @" Goodbye";
+
+	PRHVerbalExpression *innerExpression = [PRHVerbalExpression new];
+	[innerExpression find:patternPart2];
+
+	PRHVerbalExpression *verbalExpression = [[[[
+		[PRHVerbalExpression new]
+		searchMultipleLines]
+		find:patternPart1]
+		group:innerExpression]
+		then:patternPart3];
+
+	NSMutableString *entireString = [NSMutableString stringWithCapacity:patternPart1.length + patternPart2.length + patternPart3.length];
+	[entireString appendString:patternPart1];
+	[entireString appendString:patternPart2];
+	[entireString appendString:patternPart3];
+
+	STAssertTrue([verbalExpression matchesString:entireString], @"Pattern %@ that contains a group %@ should match all parts of the string", verbalExpression, innerExpression);
+	__block NSUInteger numMatches = 0;
+	[verbalExpression enumerateMatchesInString:entireString usingBlock:^(NSTextCheckingResult *result, NSMatchingFlags flags, BOOL *stop) {
+		++numMatches;
+		NSRange groupRange = [result rangeAtIndex:1];
+		NSString *groupMatchString = [entireString substringWithRange:groupRange];
+		STAssertEqualObjects(groupMatchString, patternPart2, @"Capturing group did not capture the correct text");
+	}];
+	STAssertEquals(numMatches, (NSUInteger)1UL, @"enumerateMatchesInString:: enumerated a strange number of matches");
+}
+- (void) testMatchNonCapturingGroup {
+	NSString *patternPart1 = @"Hello ";
+	NSString *patternPart2 = @"*\n one two three yes \n*";
+	NSString *patternPart3 = @" Goodbye";
+
+	PRHVerbalExpression *innerExpression = [PRHVerbalExpression new];
+	[innerExpression find:patternPart2];
+
+	PRHVerbalExpression *verbalExpression = [[[[
+		[PRHVerbalExpression new]
+		searchMultipleLines]
+		find:patternPart1]
+		nonCapturingGroup:innerExpression]
+		then:patternPart3];
+
+	NSMutableString *entireString = [NSMutableString stringWithCapacity:patternPart1.length + patternPart2.length + patternPart3.length];
+	[entireString appendString:patternPart1];
+	[entireString appendString:patternPart2];
+	[entireString appendString:patternPart3];
+
+	STAssertTrue([verbalExpression matchesString:entireString], @"Pattern %@ that contains a non-capturing group should match all parts of the string", verbalExpression);
+}
+
 @end
