@@ -11,6 +11,7 @@
 
 - (void) testMatchGroup;
 - (void) testMatchNonCapturingGroup;
+- (void) testMatchAnything;
 
 - (void) testMatchGroupContainingOr;
 

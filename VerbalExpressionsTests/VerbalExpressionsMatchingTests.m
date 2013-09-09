@@ -144,6 +144,29 @@
 	STAssertTrue([verbalExpression matchesString:entireString], @"Pattern %@ that contains a non-capturing group should match all parts of the string", verbalExpression);
 }
 
+- (void) testMatchAnything {
+	NSString *patternPart1 = @"Hello ";
+	NSString *patternPart2 = @"*\n one two three yes \n*";
+	NSString *patternPart3 = @" Goodbye";
+
+	PRHVerbalExpression *innerExpression = [PRHVerbalExpression new];
+	[innerExpression find:patternPart2];
+
+	PRHVerbalExpression *verbalExpression = [[[[
+		[PRHVerbalExpression new]
+		searchMultipleLines]
+		find:patternPart1]
+		anything]
+		then:patternPart3];
+
+	NSMutableString *entireString = [NSMutableString stringWithCapacity:patternPart1.length + patternPart2.length + patternPart3.length];
+	[entireString appendString:patternPart1];
+	[entireString appendString:patternPart2];
+	[entireString appendString:patternPart3];
+
+	STAssertTrue([verbalExpression matchesString:entireString], @"Pattern %@ that contains an anything should match all parts of the string", verbalExpression);
+}
+
 - (void) testMatchGroupContainingOr {
     PRHVerbalExpression *verbalExpression = [[[
 		[PRHVerbalExpression new]
