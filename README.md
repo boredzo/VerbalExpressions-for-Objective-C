@@ -60,6 +60,13 @@ I've added methods for creating groups:
 
 Each one takes either a literal string or a PRHVerbalExpression.
 
+    PRHVerbalExpression *exp = [[[[
+    	[PRHVerbalExpression new]
+    	find:@"I'm sorry, "]
+    	group:[[[[PRHVerbalExpression new] find:@"Dave"] or] find:@"Frank"]]
+    	then:@", I'm afraid I can't do that."];
+    	//In regex syntax: /I'm sorry, (Dave|Frank), I'm afraid I can't do that./
+
 #### Multipliers
 
 I've added methods for specifying the minimum and maximum number of times a subexpression must appear consecutively:
