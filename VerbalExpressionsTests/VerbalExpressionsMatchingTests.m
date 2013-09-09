@@ -24,6 +24,26 @@
 }
 */
 
+- (void) assertThatExpression:(PRHVerbalExpression *)verbalExpression matchesString:(NSString *)entireString numberOfTimes:(NSUInteger)expectedNumMatches andGroupsMatchSubstrings:(NSArray *)groupSubstrings {
+	__block NSUInteger numMatches = 0;
+	[verbalExpression enumerateMatchesInString:entireString usingBlock:^(NSTextCheckingResult *result, NSMatchingFlags flags, BOOL *stop) {
+		++numMatches;
+
+		NSUInteger groupIdx = 1;
+		for (NSString *groupSubstring in groupSubstrings) {
+			NSRange groupRange = [result rangeAtIndex:groupIdx];
+			if (groupSubstring == (id)[NSNull null]) {
+				STAssertEquals(groupRange.location, NSNotFound, @"Group %lu should not have matched");
+			} else {
+				NSString *groupMatchString = [entireString substringWithRange:groupRange];
+				STAssertEqualObjects(groupMatchString, groupSubstring, @"Capturing group %lu did not capture the correct text", groupIdx);
+			}
+			++groupIdx;
+		}
+	}];
+	STAssertEquals(numMatches, expectedNumMatches, @"enumerateMatchesInString:: enumerated a strange number of matches");
+}
+
 - (void) testMatchEntireString {
 	NSString *entireString = @"hello";
 	PRHVerbalExpression *verbalExpression = [
@@ -99,14 +119,7 @@
 	[entireString appendString:patternPart3];
 
 	STAssertTrue([verbalExpression matchesString:entireString], @"Pattern %@ that contains a group %@ should match all parts of the string", verbalExpression, innerExpression);
-	__block NSUInteger numMatches = 0;
-	[verbalExpression enumerateMatchesInString:entireString usingBlock:^(NSTextCheckingResult *result, NSMatchingFlags flags, BOOL *stop) {
-		++numMatches;
-		NSRange groupRange = [result rangeAtIndex:1];
-		NSString *groupMatchString = [entireString substringWithRange:groupRange];
-		STAssertEqualObjects(groupMatchString, patternPart2, @"Capturing group did not capture the correct text");
-	}];
-	STAssertEquals(numMatches, (NSUInteger)1UL, @"enumerateMatchesInString:: enumerated a strange number of matches");
+	[self assertThatExpression:verbalExpression matchesString:entireString numberOfTimes:1UL andGroupsMatchSubstrings:@[ patternPart2 ]];
 }
 - (void) testMatchNonCapturingGroup {
 	NSString *patternPart1 = @"Hello ";
@@ -129,6 +142,27 @@
 	[entireString appendString:patternPart3];
 
 	STAssertTrue([verbalExpression matchesString:entireString], @"Pattern %@ that contains a non-capturing group should match all parts of the string", verbalExpression);
+}
+
+- (void) testMatchGroupContainingOr {
+    PRHVerbalExpression *verbalExpression = [[[
+		[PRHVerbalExpression new]
+		find:@"I'm sorry, "]
+		group:[[[[PRHVerbalExpression new] find:@"Dave"] or] find:@"Frank"]]
+		then:@", I'm afraid I can't do that."];
+	NSString *entireString;
+
+	entireString = @"I'm sorry, Dave, I'm afraid I can't do that.";
+	STAssertTrue([verbalExpression matchesString:entireString], @"Pattern %@ that contains a group containing multiple subpatterns should match all parts of the string", verbalExpression);
+	[self assertThatExpression:verbalExpression matchesString:entireString numberOfTimes:1UL andGroupsMatchSubstrings:@[ @"Dave" ]];
+
+	entireString = @"I'm sorry, Frank, I'm afraid I can't do that.";
+	STAssertTrue([verbalExpression matchesString:entireString], @"Pattern %@ that contains a group containing multiple subpatterns should match all parts of the string", verbalExpression);
+	[self assertThatExpression:verbalExpression matchesString:entireString numberOfTimes:1UL andGroupsMatchSubstrings:@[ @"Frank" ]];
+
+	entireString = @"I'm sorry, Heywood, I'm afraid I can't do that.";
+	STAssertFalse([verbalExpression matchesString:entireString], @"Pattern %@ that contains a group containing multiple subpatterns should not match a string where none of the subpatterns of the group should match", verbalExpression);
+	[self assertThatExpression:verbalExpression matchesString:entireString numberOfTimes:0UL andGroupsMatchSubstrings:@[ [NSNull null] ]];
 }
 
 @end
