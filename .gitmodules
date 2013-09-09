@@ -1,3 +1,3 @@
 [submodule "Warnings"]
 	path = Warnings
-	url = git@github.com:boredzo/Warnings-xcconfig.git
+	url = https://github.com/boredzo/Warnings-xcconfig.git
