@@ -1,1 +1,2 @@
 language: objective-c
+script: xcodebuild clean build -target VerbalExpressionsTests TEST_AFTER_BUILD=YES
